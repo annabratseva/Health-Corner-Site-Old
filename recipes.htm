@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  <style>
+
+
+    /* === SIDEBAR === */
+    .sidebar {
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: calc(100% - 70px);
+      background: #2c3432;
+      padding-top: 70px;        /* чтобы меню сайта не перекрывалось */
+      z-index: 1;               /* под header, но над остальным содержимым */
+    
+    }
+    .sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      font-size:20px;
+    }
+    .sidebar li {
+      margin: 10px 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      color: #a4b18f;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background: #353d3c;
+      border-radius: 8px;
+    }
+
+    /* === MAIN CONTENT === */
+    .main-content {
+      margin-left: 200px;       /* пространство под sidebar */
+      padding: 20px;            /* отступы внутри */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #646d54;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .cards-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .cards-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 320px;
+      background: #353d3c;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+    .card:nth-child(5) { animation-delay: 1.0s; }
+    .card:nth-child(6) { animation-delay: 1.2s; }
+    .card:nth-child(7) { animation-delay: 1.4s; }
+    .card:nth-child(8) { animation-delay: 1.6s; }
+
+    .card img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      border-radius: 30px;
+    }
+    .card-content {
+      padding: 15px;
+      text-align: center;
+      color: #c7d5b7;
+    }
+    .card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #353d3c;
+      color: #a4b18f;
+      border: none;
+      font-size: 30px;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0.7;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .arrow:hover {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.2);
+    }
+    .left-arrow { left: 10px; }
+    .right-arrow { right: 10px; }
+  </style>
+</head>
+<body>
+
+  
+  <!-- Верхнее меню -->
+  <header>
+    <nav>
+      <div style="padding-left: 12%;">Your health with love!</div>
+      <div>
+        <a href="health1.htm">Health Corner</a>
+        <a href="index.htm">Home</a>
+        <a href="editorial.htm">Your start</a>
+        <a href="fitness.htm">Fitness Tutorials</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Боковое меню -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="recipes.htm">Best</a></li>
+      <li><a href="recipes_pages/recipes_breakfast/breakfast_r1.htm">Breakfast</a></li>
+      <li><a href="recipes_pages/recipes_lunch/lunch_r1.htm">Lunch</a></li>
+      <li><a href="recipes_pages/recipes_dinner/dinner_r1.htm">Dinner</a></li>
+      <li><a href="recipes_pages/recipes_desserts/desserts_r1.htm">Desserts</a></li>
+    </ul>
+  </aside>
+
+  <!-- Основной контент страницы -->
+  <div class="main-content">
+    <h1 class="fade-down">Best Recipes of the week</h1>
+    <div class="wrapper">
+      <button class="arrow left-arrow" id="leftArrow">&#8592;</button>
+      <div class="cards-container" id="cardsContainer">
+
+        <div class="card">
+          <a href="recipes_pages/page1_best.htm"><img src="recipes_img/recept1.jpg" alt="stuffed peppers"></a>
+          <div class="card-content">
+            <h3>Stuffed peppers in the oven</h3>
+            <p><i>A light dinner</i></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <a href="recipes_pages/page2_best.htm"><img src="recipes_img/recept2.jpg" alt="stewed vegetables"></a>
+          <div class="card-content">
+            <h3>Stewed vegetables in a pan</h3>
+            <p><i>Low-calorie side dish</i></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <a href="recipes_pages/page3_best.htm"><img src="recipes_img/recept3.jpg" alt="yogurt"></a>
+          <div class="card-content">
+            <h3>Fruit yogurt</h3>
+            <p><i>Delicious and simple for every day!</i></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <a href="recipes_pages/page4_best.htm"><img src="recipes_img/recept4.jpg" alt="red fish in cream sauce"></a>
+          <div class="card-content">
+            <h3>Red fish in cream sauce in the oven</h3>
+            <p><i>for cold days</i></p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="recipes_pages/page5_best.htm"><img src="recipes_img/recept5.jpg" alt="salad with tomato, etc."></a>
+          <div class="card-content">
+            <h3>Salad with tomato, cucumber and egg</h3>
+            <p><i>Easy to make!</i></p>
+          </div>
+        </div>
+
+        <div class="card">
+            <a href="recipes_pages/page6_best.htm"><img src="recipes_img/recept6.jpg" alt="philadelphia rolls"></a>
+            <div class="card-content">
+              <h3>Philadelphia rolls with salmon</h3>
+              <p><i>Japanese classic!</i></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="recipes_pages/page7_best.htm"><img src="recipes_img/recept7.jpg" alt="chicken broth"></a>
+            <div class="card-content">
+              <h3>Chicken broth with noodles</h3>
+              <p><i>A rich meal for family</i></p>
+            </div>
+            </div>
+
+     
+      </div>
+      <button class="arrow right-arrow" id="rightArrow">&#8594;</button>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('cardsContainer');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+    const clickSpeed = 300;
+
+    leftArrow.addEventListener('click', () =>
+      container.scrollBy({ left: -clickSpeed, behavior: 'smooth' })
+    );
+    rightArrow.addEventListener('click', () =>
+      container.scrollBy({ left:  clickSpeed, behavior: 'smooth' })
+    );
+  </script>
+
+<section class="intro-section"> <!--главный заголовок (с анимацией)-->
+    <img src="img/img4.png" alt="avatar" class="slide-in-left delay-1 intro-image"/>
+    <div class="intro-text slide-in-right delay-2">
+      <h2>Let's choose the dish that suits you!</h2>
+      <p> It doesn't matter what time it is, lunch, dinner or breakfast, you can find everything here! 
+        <br>Recipes are collected from all over the world and from different cuisines.</p>
+    </div>
+  </section>
+
+</body>
+</html>

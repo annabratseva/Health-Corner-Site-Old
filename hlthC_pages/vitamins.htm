@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facts about vitamins</title>
+  <link rel="stylesheet" href="../css/style.css" /> <!--ссылка на css файл-->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/> <!--иконка сайта-->
+</head>
+
+<body>
+
+  <header> <!--меню-->
+    <nav>
+      <div>Your health with love!</div>
+      <div>
+        <a href="../index.htm">Home</a>
+        <a href="../recipes.htm">Recipes</a>
+        <a href="../editorial.htm">Your Start</a>
+        <a href="../health1.htm">Health Corner</a>
+        <a href="../fitness.htm">Fitness Tutorials</a>
+      </div>
+    </nav>
+  </header>
+
+  <style>
+
+    
+  header, footer {
+    background-color: #353d3c;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: #a4b18f;
+    font-weight: bold;
+    font-size:large;
+  }
+  
+  nav a {
+    color: #a4b18f;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+    body {
+    
+      background: #1d2221;/* тёмный фон, можно заменить */
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    /* Контейнер для светлячков */
+    .fireflies {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* чтобы не мешали кликам */
+      overflow: hidden;
+      z-index: 1; /* Светлячки под картой */
+    }
+    
+    /* Один светлячок */
+    .firefly {
+      position: absolute;
+      background: rgba(255, 255, 200, 0.8);
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      animation: move 10s linear infinite;
+      box-shadow: 0 0 8px 2px rgba(255, 255, 150, 0.8);
+    }
+    
+    /* Анимация движения */
+    @keyframes move {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translate(100px, -100px) scale(1.5);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50px, 200px) scale(1);
+        opacity: 0.6;
+      }
+    }
+
+    .map-container {
+        position: relative;
+        max-width: 900px;
+        margin: 50px auto;
+      }
+      
+      .map-image {
+        width: 100%;
+        height: 15%;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      
+      .map-point {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #d9e7bf;
+        border: 4px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+      }
+      
+      .tooltip {
+        position: absolute;
+        background: #353d3c;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-size: 20px;
+        transform: translate(-50%, -120%) scale(0.5);
+        opacity: 0;
+        white-space: nowrap;
+        pointer-events: none;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        z-index: 10;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+      }
+      
+      /* При наведении: пузырек "лопается" (раскрывается) */
+      .map-point:hover .tooltip {
+        transform: translate(-50%, -140%) scale(1);
+        opacity: 1;
+      }
+
+      .ul-style {
+      text-align: center;
+      font-weight: bold;
+      font-size: 35px;
+      color: #e1f0c7;
+      list-style-type: disc;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .li-style {
+      text-align: left;
+      font-size: 20px;
+      color: #a4b18f;
+      margin-left: 15%;
+      margin-right: 15%;
+      background-color:#353d3c;
+      border-radius: 30px;
+      padding: 10px 20px;  /* Add padding inside the li */
+    }
+      
+      
+    </style>
+    
+  <body>
+
+    
+
+      <!-- Светлячки -->
+      <div class="fireflies">
+        <div class="firefly" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+        <div class="firefly" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+        <div class="firefly" style="top: 80%; left: 40%; animation-delay: 4s;"></div>
+        <div class="firefly" style="top: 10%; left: 60%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 60%; left: 20%; animation-delay: 3s;"></div>
+        <div class="firefly" style="top: 55%; left: 30%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 70%; left: 60%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 80%; left: 45%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 50%; left: 5%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 5%; left: 50%; animation-delay: 1s;"></div>
+        <div class="firefly" style="top: 10%; left: 40%; animation-delay: 4s;"></div>
+        <div class="firefly" style="top: 50%; left: 90%; animation-delay: 1s;"></div>
+      </div>
+    
+      <section class="intro-section"> <!--главный заголовок (с анимацией)-->
+        <img src="../img/006fe442-9849-4f02-bcfd-818e8da9c762_removalai_preview.png" alt="avatar" class="slide-in-left delay-1 intro-image"/>
+        <div class="intro-text slide-in-right delay-2">
+          <h2 style="color:#e1f0c7">Welcome to our mini-map on vitamins! ⋆.˚</h2>
+          <p style="color:#a4b18f"> Vitamins are organic compounds necessary for the normal functioning of the body, but which cannot be synthesized by it in sufficient quantities. 
+            <br>They enter the body with food and play a key role in metabolism ”</p> <br>
+          <p style="color:#e1f0c7;font-weight:bold">Here's a little paragraph about each vitamin!</p>
+        </div>
+      </section>
+
+      <div class="fade-down">
+        <ul class="ul-style">Vitamin A ୨ৎ
+          <div class="li-style">
+          <br><li>Supports vision (especially low-light)</li>
+          <li>Maintains healthy skin, mucous membranes and immune function</li>
+          </div>
+          <br><ul class="ul-style">B-Complex Vitamins ୨ৎ
+            <div class="li-style">
+          <br><li>B1 (Thiamine) – energy metabolism, nerve function</li>
+          <li>B2 (Riboflavin) – energy production, antioxidant support</li>
+          <li>B3 (Niacin) – DNA repair, skin health, cholesterol regulation</li>
+          <li>B5 (Pantothenic Acid) – hormone and neurotransmitter synthesis</li>
+          <li>B6 (Pyridoxine) – amino-acid metabolism, red-blood-cell formatio</li>
+          <li>B7 (Biotin) – fatty-acid synthesis, hair/skin health</li>
+          <li>B9 (Folate) – DNA synthesis, cell division, critical in pregnancy</li>
+          <li>B12 (Cobalamin) – nerve-cell integrity, red-blood-cell maturation</li>
+          </div>
+          <br><ul class="ul-style">Vitamin C (ascorbic acid) ୨ৎ
+            <div class="li-style">
+            <br><li> Powerful antioxidant; collagen formation (skin, blood vessels)</li>
+            <li>Supports immune response and iron absorption</li>
+            </div>
+          <br><ul class="ul-style">Vitamin D (calciferol) ୨ৎ
+              <div class="li-style">
+              <br><li>Regulates calcium and phosphorus for bone health</li>
+              <li>Modulates immune and muscle function</li>
+              </div>
+              <br><ul class="ul-style">Vitamin E (tocopherol) ୨ৎ
+                <div class="li-style">
+                <br><li> Lipid-soluble antioxidant; protects cell membranes</li>
+                <li>Supports immune health and skin integrity</li>
+                </div>
+                <br><ul class="ul-style">Vitamin K (phylloquinone, menaquinone) ୨ৎ
+                  <div class="li-style">
+                  <br><li>Essential for blood clotting factors</li>
+                  <li>Plays a role in bone mineralization</li>
+                  </div>
+        </ul>
+      </div>
+
+      <section class="intro-section"> <!--главный заголовок (с анимацией)-->
+        <img src="../img/77ff46b7-bd65-44da-9311-bd649d64f15e_removalai_preview.png" alt="avatar" class="slide-in-left delay-1 intro-image"/>
+        <div class="intro-text slide-in-right delay-2">
+          <h2 style="color:#e1f0c7">It's time for interesting facts about vitamins! ✶⋆.˚</h2>
+          <p style="color:#a4b18f"> Important details are hidden in the middle of the forest.</p>
+          <p style="color:#a4b18f"> Let's point at the dots and see what facts are hidden behind them ( ° ∀ ° )ﾉﾞ</p>
+        </div>
+      </section>
+
+    
+      <div class="map-container">
+        <img src="../img/7117a76bb4898f7474782ff0ed3f86e8.jpg" alt="Карта" class="map-image">
+    
+        <div class="map-point" style="top: 30%; left: 40%;">
+          <div class="tooltip">Fact: Vitamin B2 (riboflavin) + Magnesium = a great migraine treatment pair!</div>
+        </div>
+    
+        <div class="map-point" style="top: 60%; left: 70%;">
+          <div class="tooltip">Fact: Frequent nausea without signs of infection is a common symptom of vitamin B1 and B6 deficiency.</div>
+        </div>
+    
+        <div class="map-point" style="top: 50%; left: 20%;">
+          <div class="tooltip">Fact: Vitamin A + Omega-3 = A good treatment regimen for dry skin and acne</div>
+        </div>
+
+        <div class="map-point" style="top: 70%; left: 50%;">
+          <div class="tooltip">Fact: Leg cramps are more often deficient in Iron, Magnesium, vitamins B1 and B6.</div>
+        </div>
+
+        <div class="map-point" style="top:40%; left: 50%;">
+          <div class="tooltip">Fact: Vitamins B12 and D reduce the risk of pancreatic cancer to a greater extent.</div>
+        </div>
+      </div>
+ 
+
+</body>
+</html>

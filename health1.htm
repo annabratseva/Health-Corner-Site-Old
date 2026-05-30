@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Corner</title>
+
+  <!-- ПРАВИЛЬНЫЙ путь к стилям -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div>Your health with love!</div>
+      <div>
+        <a href="recipes.htm">Recipes</a>
+        <a href="index.htm">Home</a>
+        <a href="editorial.htm">Your start</a>
+        <a href="fitness.htm">Fitness Tutorials</a>
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <section class="intro-section"> <!--главный заголовок (с анимацией)-->
+    <img src="img/img2.jpg" alt="avatar" class="slide-in-left delay-1 intro-image"/>
+    <div class="intro-text slide-in-right delay-2">
+      <h2>Meditation Time ⋆.˚</h2>
+      <p> It's time for meditation. Let's immerse ourselves in a calm atmosphere and put aside all doubts. The main thing is to listen to your body and overexert yourself!</p>
+      <p>You can find out useful information about meditation practice, as well as vitamins with fun facts and courses on self-love ദ്ദി(ᵔᗜᵔ)!</p>
+    </div>
+  </section>
+
+
+    <h2>Let's start by choosing what you want to know first! </h2>
+
+    <!-- Центрированная кнопка -->
+    <div class="center-button-wrapper">
+        <button class="open-btn" onclick="openPanel()">Show menu</button>
+      </div>
+    
+      <!-- Подложка -->
+      <div class="overlay" id="overlay" onclick="closePanel()"></div>
+    
+      <!-- Боковая панель -->
+      <div class="side-panel" id="sidePanel">
+        <button class="close-btn" onclick="closePanel()">×</button>
+        <ul>
+          <li style="font-size:150%;"><a href="hlthC_pages/meditation.htm">Meditation</a></li>
+          <li style="font-size:150%;"><a href="hlthC_pages/vitamins.htm">Vitamins</a></li>
+          <li style="font-size:150%;"><a href="hlthC_pages/selfcare.htm">Self-Care</a></li>
+        </ul>
+      </div>
+    
+      <script>
+        function openPanel() {
+          document.getElementById('sidePanel').classList.add('open');
+          document.getElementById('overlay').classList.add('active');
+        }
+    
+        function closePanel() {
+          document.getElementById('sidePanel').classList.remove('open');
+          document.getElementById('overlay').classList.remove('active');
+        }
+      </script>
+
+  
+  <img src="img/lotus1.png" alt="lotus1" style="height:20%;width:10%" ><img src="img/lotus2.png" style="height:25%;width:25%"><img src="img/lotus3.png" style="height:20%;width:10%">
+
+  <style>
+
+    body{
+        background:none;
+        background-color:#F7F7E8;
+    }
+
+
+  </style>
+
+</head>
+
+<div class="container"> <!--баннер в конце-->
+    <img src="img/img3.jpg" class="banner-image" alt="Norway" style="width:100%;">
+  </div>
+
+</body>
+</html>

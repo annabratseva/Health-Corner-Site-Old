@@ -1,0 +1,537 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:  #646d54;
+    text-align: center;
+    background-color: #F7F7E8;
+    font-size:1em;
+    background: linear-gradient(to top,#F7F7E8, rgb(255, 254, 248)); 
+  }
+  
+
+  #hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg9.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    margin: 30px;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    
+  }
+  
+
+  header, footer {
+    background-color: #C7CFB7;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: #646d54;
+    font-weight: bold;
+    font-size:large;
+  }
+  
+  nav a {
+    color: #646d54;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  
+  .avatar {
+    width: 150px;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    color: #646d54;
+    font-size: 2em;
+  }
+  
+  a.link {
+    color: #a5b4fc;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 40px 20px;
+    font-size:larger;
+  }
+
+  footer p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size:large;
+  }
+  .fade-in-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #C7CFB7;
+    color: #646d54;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.2s ease-in-out;
+    font-weight:bold;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .fade-in-button:hover {
+    background: #646d54;
+    color:white;
+  }
+  
+  /* Контейнер секции */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Картинка */
+.intro-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Анимация слева направо */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Анимация справа налево */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards;
+}
+
+/* Задержки */
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Текст */
+.intro-text {
+  max-width: 400px;
+}
+
+/* Анимации */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 50px; 
+  margin-bottom: 20px;
+}
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px #abbd8c;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-card.delay-1 { animation-delay: 0.3s; }
+.fade-card.delay-2 { animation-delay: 0.6s; }
+.fade-card.delay-3 { animation-delay: 0.9s; }
+.fade-card.delay-4 { animation-delay: 0.9s; }
+/* Добавляй больше delay при необходимости */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-down {
+  opacity: 0;
+  transform: translateY(-20px); /* вверх на 20px */
+  animation: fadeDown 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.side-panel {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 250px;
+  height: calc(100% - 50px);
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  padding: 20px;
+
+  /* FLEX для выравнивания */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  visibility: hidden;
+}
+
+.side-panel.open {
+  transform: translateX(0%);
+  visibility: visible;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius:30px
+}
+
+/*открытие кнопки (health corner)*/
+.open-btn {
+  background: #646d54;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight:bold;
+  cursor: pointer;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  /*анимация*/
+  transition: all 0.3s ease;
+  animation: fadeIn 1.2s ease-in-out;
+  font-weight:bold;
+  margin-bottom: 35px;
+}
+
+/*анимамция кнопки на странице health corner*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* центрированная кнопка */
+.center-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*меняет цвет при наведении (кнопка на health corner)*/
+.open-btn:hover{
+  background:#C7CFB7;
+  color: #646d54;
+}
+
+/* Подложка */
+.overlay {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Правая панель */
+.side-panel {
+  position: fixed;
+  top: 50px;
+  right: -300px;
+  width: 300px;
+  height: calc(100% - 50px);
+  background-color: #fffbed;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 999;
+}
+
+.side-panel.open {
+  right: 0;
+}
+
+/*список на панели*/
+.side-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/*список на панели*/
+.side-panel li {
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+/*закрытие кнопки(health corner)*/
+.close-btn {
+position: absolute;
+top: 15px;
+right: 15px;
+background-color: #646d54;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 3px;
+font-size: 25px;
+}
+.side-panel li a {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* Наследует цвет текста от родителя */
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #fffbed;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.side-panel li a:hover {
+  background-color: #cedbbf;
+  transform: scale(1.05);
+}
+
+p{
+  font-size:110%;
+  color:#646d54;
+}
+
+
+
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+
+  /* Анимация появления */
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Ключевые кадры для анимации */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recipe-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 20px;
+
+  max-width: 900px;
+}
+
+.recipe-image img {
+  max-width: 350px;
+  height: auto;
+  margin-top:30%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateX(-20px);
+}
+
+.recipe-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #646d54;
+}
+
+.recipe-content h3 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #7a8568;
+}
+
+.ingredient-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ingredient-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #646d54;
+}
+
+.ingredient-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.step p {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
+
+

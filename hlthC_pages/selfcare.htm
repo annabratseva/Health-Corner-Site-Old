@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Self-care guides</title>
+  <link rel="stylesheet" href="../css/style.css" /> <!--ссылка на css файл-->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/> <!--иконка сайта-->
+</head>
+
+<body>
+
+  <style>
+    .main-wrapper {
+     display: flex;
+     flex-direction: column;
+     gap: 60px; /* Отступ между блоками */
+     align-items: center;
+     padding: 50px 20px;
+     max-width: 1200px;
+     margin: auto;
+   }
+   
+   .block {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     gap: 40px;
+     width: 100%;
+   }
+   
+   .video-container {
+     flex: 1 1 400px;
+     max-width: 500px;
+     position: relative;
+     padding-bottom: 56.25%; /* 16:9 соотношение */
+     height: 0;
+     overflow: hidden;
+     transition: transform 0.4s ease;
+     border-radius: 30px;
+   }
+   
+   .video-container:hover {
+     transform: scale(1.05);
+   }
+   
+   .video-container iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: none;
+     border-radius: 30px;
+   }
+   
+   .text-content {
+     flex: 1 1 300px;
+     max-width: 500px;
+     font-size: 18px;
+     line-height: 1.6;
+     color: #333;
+   }
+   
+       </style>
+
+  <header> <!--меню-->
+    <nav>
+      <div>Your health with love!</div>
+      <div>
+
+        <a href="../index.htm">Home</a>
+        <a href="../recipes.htm">Recipes</a>
+        <a href="../editorial.htm">Your Start</a>
+        <a href="../health1.htm">Health Corner</a>
+        <a href="../fitness.htm">Fitness Tutorials</a>
+
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <div class="main-wrapper">
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/rf1YmgeQrrI?si=j7lQaAf8rleb1oEk" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[20 Ideas for mental and physical health]</h2>
+        <p class="fade-down"> Where to begin? This video will perfectly describe 20 ideas that everyone will like!
+           Choose the one that will be comfortable for you.. ݁₊ ⊹ . ݁˖ . ݁  <br>
+          <i>"By Simple Happy Zen"</i><br></p>
+          <img src="../img/self1.jpg" style="height:70%;width:70%;border-radius: 50px;" class="fade-down">
+      </div>
+    </div>
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/hYHrzUyLac8?si=gChc_87gK56tNhKJ" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[How to work when your mental health is suffering]</h2>
+        <p class="fade-down">We often get stressed during deadlines and our mental state can deteriorate quite quickly. 
+          This video will fix a lot of problems related to this! ݁₊ ⊹  <br>
+          <i>"By Amy Wang"</i><br></p>
+          <img src="../img/self2.jpg" style="height:70%;width:70%;border-radius: 50px;" class="fade-down">
+      </div>
+    </div>
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/2V8BZ2uT7tc?si=FAjZEVhYKoIfpuv9" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[5 Self-Care tips that ACTUALLY work]</h2>
+        <p class="fade-down">You can often hear "Just believe in yourself" on the Internet,
+           which doesn't help in any way. A few tips in this video will really help in practice!  ݁₊ ⊹ . ݁˖ . ݁  <br>
+          <i>"By Caroline Winkler"</i><br><br>
+          <img src="../img/self3.jpg" style="height:70%;width:70%;border-radius: 50px;" class="fade-down"></p>
+      </div>
+    </div>
+
+    
+
+</body>
+</html>

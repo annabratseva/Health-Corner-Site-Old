@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meditation practice</title>
+  <link rel="stylesheet" href="../css/style.css" /> <!--ссылка на css файл-->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/> <!--иконка сайта-->
+</head>
+
+<body>
+
+    <style>
+ .main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Отступ между блоками */
+  align-items: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.video-container {
+  flex: 1 1 400px;
+  max-width: 500px;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 соотношение */
+  height: 0;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  border-radius: 30px;
+}
+
+.video-container:hover {
+  transform: scale(1.05);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+}
+
+.text-content {
+  flex: 1 1 300px;
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+    </style>
+
+  <header> <!--меню-->
+    <nav>
+      <div>Your health with love!</div>
+      <div>
+        <a href="../index.htm">Home</a>
+        <a href="../recipes.htm">Recipes</a>
+        <a href="../editorial.htm">Your Start</a>
+        <a href="../health1.htm">Health Corner</a>
+        <a href="../fitness.htm">Fitness Tutorials</a>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <div class="main-wrapper">
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/tqhxMUm7XXU?si=9Fn-_1rl48ZaGotU" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[Reprogramming your mind]</h2>
+        <p class="fade-down"> This video will help you relax, calm your thoughts and reconnect with your body.  
+          Take a deep breath, press play, and let yourself go. ݁₊ ⊹ . ݁˖ . ݁  <br>
+          <i>"By Show Memonto"</i><br></p>
+          <img src="../img/flower1.png" style="height:70%;width:70%" class="fade-down">
+      </div>
+    </div>
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VpHz8Mb13_Y?si=XSdWNnGW27KBxeS8" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[5 Minute meditation]</h2>
+        <p class="fade-down">Wonderful lessons in meditation and self-love that give you the energy to take big steps towards your goals. ݁₊ ⊹ .  <br><br>
+          "Life is an art, make it your masterpiece" <br>
+          <i>"By Lavendaire"</i><br></p>
+          <img src="../img/flower2.png" style="height:70%;width:70%" class="fade-down">
+      </div>
+    </div>
+  
+    <div class="block">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/gkygg9EMO84?si=rmogff2O7pDQLVKk" allowfullscreen></iframe>
+      </div>
+      <div class="text-content">
+        <h2 class="fade-down" style="color:#646d54">[13 min Breathwork]</h2>
+        <p class="fade-down">Use this breath practice for a clear, calm, and energized mind. This is for those who feel ungrounded, overworked, or mentally overstimulated.  ݁₊ ⊹ . ݁˖ . ݁  <br>
+          <i>"By Akshaya Agnes"</i><br>
+          <img src="../img/flower4.png" style="height:70%;width:70%" class="fade-down"></p>
+      </div>
+    </div>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breakfast</title>
+  <link rel="stylesheet" href="../../css/style.css" /> <!--ссылка на css файл-->
+  <link rel="icon" href="../../img/favicon.ico" type="image/x-icon"/> <!--иконка сайта-->
+
+<style>
+
+    /* === SIDEBAR === */
+    .sidebar {
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: calc(100% - 70px);
+      background: #2c3432;
+      padding-top: 70px;        /* чтобы меню сайта не перекрывалось */
+      z-index: 1;               /* под header, но над остальным содержимым */
+    
+    }
+    .sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      font-size:20px;
+    }
+    .sidebar li {
+      margin: 10px 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      color: #a4b18f;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background: #353d3c;
+      border-radius: 8px;
+    }
+    
+    /* === MAIN CONTENT === */
+    .main-content {
+      margin-left: 200px;       /* пространство под sidebar */
+      padding: 20px;            /* отступы внутри */
+    }
+    
+    </style>
+    </head>
+
+<body>
+
+  
+
+  <header> <!--меню-->
+    <nav>
+      <div style="padding-left: 12%;">Your health with love!</div>
+      <div>
+        <a href="../../index.htm">Home</a>
+        <a href="../../recipes.htm">Recipes</a>
+        <a href="../../editorial.htm">Your Start</a>
+        <a href="../../health1.htm">Health Corner</a>
+        <a href="../../fitness.htm">Fitness Tutorials</a>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Боковое меню -->
+    <aside class="sidebar">
+        <ul>
+          <li><a href="../../recipes.htm">Best</a></li>
+          <li><a href="../../recipes_pages/recipes_breakfast/breakfast_r1.htm">Breakfast</a></li>
+          <li><a href="../../recipes_pages/recipes_lunch/lunch_r1.htm">Lunch</a></li>
+          <li><a href="../../recipes_pages/recipes_dinner/dinner_r1.htm">Dinner</a></li>
+          <li><a href="../../recipes_pages/recipes_desserts/desserts_r1.htm">Desserts</a></li>
+        </ul>
+      </aside>
